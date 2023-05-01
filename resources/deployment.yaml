@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd_deployment
+  namespace: cicd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample_webapp
+  template:
+    metadata:
+      labels:
+        app: sample_webapp
+    spec:
+      containers:
+        - name: sample_webapp
+          image: risilze/cicd_project:54b48447c0ed69fdc4eb7fc0743848d48b6d9147
+          ports:
+            - containerPort: 8080
