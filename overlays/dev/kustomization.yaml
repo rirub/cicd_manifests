@@ -4,4 +4,4 @@ images:
 - name: risilze/cicd_project
   newTag: 737d9a6c
 resources:
-- ../../resource
+- ../../resources
